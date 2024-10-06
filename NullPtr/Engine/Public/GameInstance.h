@@ -11,12 +11,5 @@ public:
 	void Render_Engine();
 
 	void Destroy_Engine();
-
-public:
-	virtual void OnEnable() override;
-	virtual void OnDisable() override;
-	virtual void OnDestroy() override;
-
-	virtual void Free() override;
 };
 

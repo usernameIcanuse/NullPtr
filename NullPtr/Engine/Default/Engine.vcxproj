@@ -139,6 +139,7 @@
     <ClInclude Include="..\Public\GameObject.h" />
     <ClInclude Include="..\Public\Graphic_Device.h" />
     <ClInclude Include="..\Public\ObjectManager.h" />
+    <ClInclude Include="Engine_Struct.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>

@@ -13,9 +13,6 @@
     <Filter Include="02.Components">
       <UniqueIdentifier>{b3860080-fa72-4600-81e7-e539f9d6fbcc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="03.BaseClass">
-      <UniqueIdentifier>{ab433aa3-da7f-4503-a17e-f49117786a4f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="99.Etc">
       <UniqueIdentifier>{f2be5470-b06b-402e-abc3-5b9a70133338}</UniqueIdentifier>
     </Filter>
@@ -25,7 +22,10 @@
     <Filter Include="04.Manager\00.ObjectManager">
       <UniqueIdentifier>{26f2227c-d6ad-43a6-8304-a944426f6819}</UniqueIdentifier>
     </Filter>
-    <Filter Include="03.BaseClass\00.GameObject">
+    <Filter Include="03.ObjectClass">
+      <UniqueIdentifier>{ab433aa3-da7f-4503-a17e-f49117786a4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.ObjectClass\00.GameObject">
       <UniqueIdentifier>{8508eea3-febc-48f5-9c64-012adcd722e5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -38,7 +38,7 @@
       <Filter>01.GameInstance</Filter>
     </ClInclude>
     <ClInclude Include="..\Public\CBase.h">
-      <Filter>03.BaseClass</Filter>
+      <Filter>03.ObjectClass</Filter>
     </ClInclude>
     <ClInclude Include="..\Public\Engine_Defines.h">
       <Filter>99.Etc</Filter>
@@ -49,7 +49,12 @@
     <ClInclude Include="..\Public\Engine_Macro.h">
       <Filter>99.Etc</Filter>
     </ClInclude>
-    <ClInclude Include="..\Public\GameObject.h" />
+    <ClInclude Include="..\Public\GameObject.h">
+      <Filter>03.ObjectClass\00.GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine_Struct.h">
+      <Filter>99.Etc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Engine.rc" />
@@ -62,7 +67,7 @@
       <Filter>01.GameInstance</Filter>
     </ClCompile>
     <ClCompile Include="..\Private\CBase.cpp">
-      <Filter>03.BaseClass</Filter>
+      <Filter>03.ObjectClass</Filter>
     </ClCompile>
     <ClCompile Include="..\Private\ObjectManager.cpp">
       <Filter>04.Manager\00.ObjectManager</Filter>
@@ -70,6 +75,8 @@
     <ClCompile Include="..\Private\Engine_Defines.cpp">
       <Filter>99.Etc</Filter>
     </ClCompile>
-    <ClCompile Include="..\Private\GameObject.cpp" />
+    <ClCompile Include="..\Private\GameObject.cpp">
+      <Filter>03.ObjectClass\00.GameObject</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

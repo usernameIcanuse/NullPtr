@@ -25,18 +25,6 @@ void GameInstance::Destroy_Engine()
     //destroy singleton
 }
 
-void GameInstance::OnEnable()
-{
-}
-
-void GameInstance::OnDisable()
-{
-}
-
-void GameInstance::OnDestroy()
-{
-}
-
 void GameInstance::Free()
 {
 }
