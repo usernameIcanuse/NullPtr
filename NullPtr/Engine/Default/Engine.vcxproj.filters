@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="00.System">
+      <UniqueIdentifier>{5aa7e507-8744-4760-9137-3a04ebecc30e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.GameInstance">
+      <UniqueIdentifier>{2fd18023-1e2e-40b1-bf23-71401d2642b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.System\00.Graphic">
+      <UniqueIdentifier>{86eeed7d-0cd8-4bc5-a94e-491ce85092b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Components">
+      <UniqueIdentifier>{b3860080-fa72-4600-81e7-e539f9d6fbcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.BaseClass">
+      <UniqueIdentifier>{ab433aa3-da7f-4503-a17e-f49117786a4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Etc">
+      <UniqueIdentifier>{f2be5470-b06b-402e-abc3-5b9a70133338}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Manager">
+      <UniqueIdentifier>{bd12725f-c060-4523-87ac-19469a63cd2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Manager\00.ObjectManager">
+      <UniqueIdentifier>{26f2227c-d6ad-43a6-8304-a944426f6819}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.BaseClass\00.GameObject">
+      <UniqueIdentifier>{8508eea3-febc-48f5-9c64-012adcd722e5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\Public\Graphic_Device.h">
+      <Filter>00.System\00.Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\GameInstance.h">
+      <Filter>01.GameInstance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CBase.h">
+      <Filter>03.BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Engine_Defines.h">
+      <Filter>99.Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\ObjectManager.h">
+      <Filter>04.Manager\00.ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Engine_Macro.h">
+      <Filter>99.Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\GameObject.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Engine.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Private\Graphic_Device.cpp">
+      <Filter>00.System\00.Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\GameInstance.cpp">
+      <Filter>01.GameInstance</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CBase.cpp">
+      <Filter>03.BaseClass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\ObjectManager.cpp">
+      <Filter>04.Manager\00.ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Engine_Defines.cpp">
+      <Filter>99.Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\GameObject.cpp" />
+  </ItemGroup>
+</Project>
