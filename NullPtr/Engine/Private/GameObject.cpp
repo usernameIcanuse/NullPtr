@@ -4,14 +4,18 @@ GameObject::GameObject()
 {
 }
 
+GameObject::~GameObject()
+{
+}
+
 void GameObject::Start()
 {
 }
 
-void GameObject::Tick()
+void GameObject::Tick(float deltaTime)
 {
 }
 
-void GameObject::LateTick()
+void GameObject::LateTick(float deltaTime)
 {
 }

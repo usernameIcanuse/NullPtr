@@ -1,0 +1,20 @@
+﻿  CBase.cpp
+  Engine_Defines.cpp
+  GameInstance.cpp
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\ObjectManager.h(7,2): error C2017: 이스케이프 시퀀스가 잘못되었습니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\GameInstance.h(7,2): error C2017: 이스케이프 시퀀스가 잘못되었습니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Private\GameInstance.cpp(3,1): error C2146: 구문 오류: ';'이(가) 'instance' 식별자 앞에 없습니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Private\GameInstance.cpp(11,20): error C2511: 'void GameInstance::Tick_Engine(float)': 오버로드된 멤버 함수가 'GameInstance'에 없습니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\GameInstance.h(5): message : 'GameInstance' 선언을 참조하십시오.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Private\GameInstance.cpp(32,20): error C2509: 'Free': 멤버 함수를 'GameInstance'에서 선언하지 않았습니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\GameInstance.h(5): message : 'GameInstance' 선언을 참조하십시오.
+  GameObject.cpp
+  Graphic_Device.cpp
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\Graphic_Device.h(6,2): error C2017: 이스케이프 시퀀스가 잘못되었습니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\Graphic_Device.h(8,42): error C2653: 'GRAPHICDESC': 클래스 또는 네임스페이스 이름이 아닙니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\Graphic_Device.h(8,55): error C2061: 구문 오류: 식별자 'WINMODE'
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Private\Graphic_Device.cpp(3,1): error C2146: 구문 오류: ';'이(가) 'instance' 식별자 앞에 없습니다.
+  ObjectManager.cpp
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\ObjectManager.h(7,2): error C2017: 이스케이프 시퀀스가 잘못되었습니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Private\ObjectManager.cpp(11,29): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  코드를 생성하고 있습니다...

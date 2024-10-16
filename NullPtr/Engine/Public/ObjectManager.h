@@ -5,17 +5,19 @@ class GameObject;
 class ObjectManager final : public CBase
 {
 	DECLARE_SINGLETON(ObjectManager)
+
 public:
-	void OnEnable_Object();
-
+	HRESULT Reserve_Container(unsigned int iNumLevels);
 	void StartObject();
-	void Tick();
-	void LateTick();
-
-	void OnDisable_Object();
-	void OnDestroy_Object();
+	void Tick(float deltaTime);
+	void LateTick(float deltaTime);
 	
+	virtual void Free() override;
 private:
-	list<GameObject> Layers;
+	vector<list<shared_ptr<GameObject>>> StartObjects;
+	vector<list<shared_ptr<GameObject>>> ObjectLayers;
+
+	int currentLevel;
+	int levelNum;
 };
 

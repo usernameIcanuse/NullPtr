@@ -3,19 +3,20 @@
 
 class GameObject : public CBase
 {
-public:
+protected:
 	GameObject();
+	virtual ~GameObject();
 
 public:
 	virtual void Start();
-	virtual void Tick();
-	virtual void LateTick();
+	virtual void Tick(float deltaTime);
+	virtual void LateTick(float deltaTime);
 
-public:
 	virtual void OnEnable() {}
 	virtual void OnDisable() {}
 	virtual void OnDestroy() {}
 
 	virtual void Free() {}
+
 };
 

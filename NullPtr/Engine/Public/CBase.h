@@ -1,15 +1,15 @@
 #pragma once
 #include "Engine_Defines.h"
 
-class CBase abstract
+class CBase
 {
-protected:
+public:
 	CBase() = default;
 	virtual ~CBase() = default;
 
 public:
 	void Set_Enable(bool enable);
-	bool Get_Enable();
+	bool Is_Enable();
 
 public:
 	virtual void OnEnable() {}

@@ -3,9 +3,12 @@
 void CBase::Set_Enable(bool enable)
 {
 	isEnable = enable;
+
+	isEnable ? OnEnable() : OnDisable();
 }
 
-bool CBase::Get_Enable()
+bool CBase::Is_Enable()
 {
 	return isEnable;
 }
+

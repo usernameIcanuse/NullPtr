@@ -8,9 +8,13 @@ void GameInstance::Initial_Engine()
     //initialize;
 }
 
-void GameInstance::Tick_Engine()
+void GameInstance::Tick_Engine(float deltaTime)
 {
+    ObjectManager::Get_Instance()->StartObject();
     //tick
+    ObjectManager::Get_Instance()->Tick(deltaTime);
+
+    ObjectManager::Get_Instance()->LateTick(deltaTime);
 }
 
 void GameInstance::Render_Engine()
@@ -23,6 +27,7 @@ void GameInstance::Render_Engine()
 void GameInstance::Destroy_Engine()
 {
     //destroy singleton
+    ObjectManager::Destroy_Instance();
 }
 
 void GameInstance::Free()
