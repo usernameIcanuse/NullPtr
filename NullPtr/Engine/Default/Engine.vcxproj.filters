@@ -28,6 +28,12 @@
     <Filter Include="03.ObjectClass\00.GameObject">
       <UniqueIdentifier>{8508eea3-febc-48f5-9c64-012adcd722e5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="04.Manager\01.CollisionManager">
+      <UniqueIdentifier>{126f1fb9-7285-4a4d-b44e-80f4e6ae58e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Components\Collider">
+      <UniqueIdentifier>{9a76fd2a-b494-40ba-9f5a-f2a899570fc4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h" />
@@ -40,19 +46,28 @@
     <ClInclude Include="..\Public\CBase.h">
       <Filter>03.ObjectClass</Filter>
     </ClInclude>
-    <ClInclude Include="..\Public\Engine_Defines.h">
-      <Filter>99.Etc</Filter>
-    </ClInclude>
     <ClInclude Include="..\Public\ObjectManager.h">
       <Filter>04.Manager\00.ObjectManager</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Public\Engine_Macro.h">
-      <Filter>99.Etc</Filter>
     </ClInclude>
     <ClInclude Include="..\Public\GameObject.h">
       <Filter>03.ObjectClass\00.GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="Engine_Struct.h">
+    <ClInclude Include="..\Private\CollisionManager.h">
+      <Filter>04.Manager\01.CollisionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Component.h">
+      <Filter>02.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Collider.h">
+      <Filter>02.Components\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Engine_Defines.h">
+      <Filter>99.Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Engine_Macro.h">
+      <Filter>99.Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Engine_Struct.h">
       <Filter>99.Etc</Filter>
     </ClInclude>
   </ItemGroup>
@@ -72,11 +87,20 @@
     <ClCompile Include="..\Private\ObjectManager.cpp">
       <Filter>04.Manager\00.ObjectManager</Filter>
     </ClCompile>
-    <ClCompile Include="..\Private\Engine_Defines.cpp">
-      <Filter>99.Etc</Filter>
-    </ClCompile>
     <ClCompile Include="..\Private\GameObject.cpp">
       <Filter>03.ObjectClass\00.GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CollisionManager.cpp">
+      <Filter>04.Manager\01.CollisionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Component.cpp">
+      <Filter>02.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Collider.cpp">
+      <Filter>02.Components\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Public\Engine_Macro.cpp">
+      <Filter>99.Etc</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -6,15 +6,19 @@ void GameInstance::Initial_Engine()
 {
     //매니저 인스턴스 생성
     //initialize;
+    objectManager = ObjectManager::Create_Instance();
+    collisionManager = CollisionManager::Create_Instance();
+
+    objectManager->Reserve_Container(1);
 }
 
 void GameInstance::Tick_Engine(float deltaTime)
 {
-    ObjectManager::Get_Instance()->StartObject();
+    objectManager->StartObject();
     //tick
-    ObjectManager::Get_Instance()->Tick(deltaTime);
+    objectManager->Tick(deltaTime);
 
-    ObjectManager::Get_Instance()->LateTick(deltaTime);
+    objectManager->LateTick(deltaTime);
 }
 
 void GameInstance::Render_Engine()

@@ -1,20 +1,47 @@
-﻿  CBase.cpp
-  Engine_Defines.cpp
-  GameInstance.cpp
-C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\ObjectManager.h(7,2): error C2017: 이스케이프 시퀀스가 잘못되었습니다.
-C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\GameInstance.h(7,2): error C2017: 이스케이프 시퀀스가 잘못되었습니다.
-C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Private\GameInstance.cpp(3,1): error C2146: 구문 오류: ';'이(가) 'instance' 식별자 앞에 없습니다.
+﻿  GameInstance.cpp
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\ObjectManager.h(7,2): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\ObjectManager.h(7,2): warning C4183: 'GameInstance': 반환 형식이 없습니다. 'int'를 반환하는 멤버 함수로 간주됩니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\ObjectManager.h(7,2): error C2523: 'ObjectManager::~GameInstance': 소멸자 태그가 일치하지 않습니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\ObjectManager.h(7,2): error C2923: 'std::shared_ptr': 'ObjectManager::GameInstance'은(는) '_Ty' 매개 변수에 대한 올바른 템플릿 형식 인수가 아닙니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\ObjectManager.h(7,2): error C2955: 'std::shared_ptr': 클래스 템플릿을(를) 사용하려면 템플릿 인수 목록이 필요합니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\memory(1493): message : 'std::shared_ptr' 선언을 참조하십시오.
 C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Private\GameInstance.cpp(11,20): error C2511: 'void GameInstance::Tick_Engine(float)': 오버로드된 멤버 함수가 'GameInstance'에 없습니다.
 C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\GameInstance.h(5): message : 'GameInstance' 선언을 참조하십시오.
-C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Private\GameInstance.cpp(32,20): error C2509: 'Free': 멤버 함수를 'GameInstance'에서 선언하지 않았습니다.
-C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\GameInstance.h(5): message : 'GameInstance' 선언을 참조하십시오.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Private\GameInstance.cpp(13,34): error C2675: 단항 '->': 'std::shared_ptr'이(가) 이 연산자를 정의하지 않거나 미리 정의된 연산자에 허용되는 형식으로의 변환을 정의하지 않습니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\memory(1700,22): message : '_Ty2 *std::shared_ptr<_Ty>::operator ->(void) noexcept const'일 수 있습니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Private\GameInstance.cpp(13): error C2783: '_Ty2 *std::shared_ptr<_Ty>::operator ->(void) noexcept const': '__formal'의 템플릿 인수를 추론할 수 없습니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\memory(1700): message : 'std::shared_ptr<_Ty>::operator ->' 선언을 참조하십시오.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Private\GameInstance.cpp(13,36): error C2039: 'StartObject': 'std::shared_ptr'의 멤버가 아닙니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\memory(1493): message : 'std::shared_ptr' 선언을 참조하십시오.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Private\GameInstance.cpp(15,34): error C2675: 단항 '->': 'std::shared_ptr'이(가) 이 연산자를 정의하지 않거나 미리 정의된 연산자에 허용되는 형식으로의 변환을 정의하지 않습니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\memory(1700,22): message : '_Ty2 *std::shared_ptr<_Ty>::operator ->(void) noexcept const'일 수 있습니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Private\GameInstance.cpp(15): error C2783: '_Ty2 *std::shared_ptr<_Ty>::operator ->(void) noexcept const': '__formal'의 템플릿 인수를 추론할 수 없습니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\memory(1700): message : 'std::shared_ptr<_Ty>::operator ->' 선언을 참조하십시오.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Private\GameInstance.cpp(15,36): error C2039: 'Tick': 'std::shared_ptr'의 멤버가 아닙니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\memory(1493): message : 'std::shared_ptr' 선언을 참조하십시오.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Private\GameInstance.cpp(17,34): error C2675: 단항 '->': 'std::shared_ptr'이(가) 이 연산자를 정의하지 않거나 미리 정의된 연산자에 허용되는 형식으로의 변환을 정의하지 않습니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\memory(1700,22): message : '_Ty2 *std::shared_ptr<_Ty>::operator ->(void) noexcept const'일 수 있습니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Private\GameInstance.cpp(17): error C2783: '_Ty2 *std::shared_ptr<_Ty>::operator ->(void) noexcept const': '__formal'의 템플릿 인수를 추론할 수 없습니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\memory(1700): message : 'std::shared_ptr<_Ty>::operator ->' 선언을 참조하십시오.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Private\GameInstance.cpp(17,36): error C2039: 'LateTick': 'std::shared_ptr'의 멤버가 아닙니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\memory(1493): message : 'std::shared_ptr' 선언을 참조하십시오.
   GameObject.cpp
   Graphic_Device.cpp
-C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\Graphic_Device.h(6,2): error C2017: 이스케이프 시퀀스가 잘못되었습니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\Graphic_Device.h(6,2): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\Graphic_Device.h(6,2): warning C4183: 'GameInstance': 반환 형식이 없습니다. 'int'를 반환하는 멤버 함수로 간주됩니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\Graphic_Device.h(6,2): error C2523: 'Graphic_Device::~GameInstance': 소멸자 태그가 일치하지 않습니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\Graphic_Device.h(6,2): error C2923: 'std::shared_ptr': 'Graphic_Device::GameInstance'은(는) '_Ty' 매개 변수에 대한 올바른 템플릿 형식 인수가 아닙니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\Graphic_Device.h(6,2): error C2955: 'std::shared_ptr': 클래스 템플릿을(를) 사용하려면 템플릿 인수 목록이 필요합니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\memory(1493): message : 'std::shared_ptr' 선언을 참조하십시오.
 C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\Graphic_Device.h(8,42): error C2653: 'GRAPHICDESC': 클래스 또는 네임스페이스 이름이 아닙니다.
 C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\Graphic_Device.h(8,55): error C2061: 구문 오류: 식별자 'WINMODE'
-C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Private\Graphic_Device.cpp(3,1): error C2146: 구문 오류: ';'이(가) 'instance' 식별자 앞에 없습니다.
   ObjectManager.cpp
-C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\ObjectManager.h(7,2): error C2017: 이스케이프 시퀀스가 잘못되었습니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\ObjectManager.h(7,2): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\ObjectManager.h(7,2): warning C4183: 'GameInstance': 반환 형식이 없습니다. 'int'를 반환하는 멤버 함수로 간주됩니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\ObjectManager.h(7,2): error C2523: 'ObjectManager::~GameInstance': 소멸자 태그가 일치하지 않습니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\ObjectManager.h(7,2): error C2923: 'std::shared_ptr': 'ObjectManager::GameInstance'은(는) '_Ty' 매개 변수에 대한 올바른 템플릿 형식 인수가 아닙니다.
+C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Public\ObjectManager.h(7,2): error C2955: 'std::shared_ptr': 클래스 템플릿을(를) 사용하려면 템플릿 인수 목록이 필요합니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\memory(1493): message : 'std::shared_ptr' 선언을 참조하십시오.
 C:\Users\dhgld\Desktop\NullPtr\NullPtr\Engine\Private\ObjectManager.cpp(11,29): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Engine_Macro.cpp
   코드를 생성하고 있습니다...
