@@ -1,4 +1,5 @@
 #include "Collider.h"
+#include "GameObject.h"
 
 Collider::Collider()
 {
@@ -8,16 +9,66 @@ Collider::~Collider()
 {
 }
 
-void Collider::OnCollisionStart(weak_ptr<Collider> otherCollider)
+void Collider::OnCollision(weak_ptr<Collider> otherCollider, bool isCollided)
 {
+	auto iter = find_if(preOtherColliderList.begin(),
+		preOtherColliderList.end(),
+		[&](weak_ptr<Collider> preOtherCollider)
+		{
+			if (!preOtherCollider.lock().get() || otherCollider.lock().get())
+			{
+				return false;
+			}
+			
+			return preOtherCollider.lock()->Get_ColliderIndex() == otherCollider.lock()->Get_ColliderIndex();
+		});
+
+	if (iter == preOtherColliderList.end())
+	{
+		if (isCollided)
+		{
+			CollisionStart(otherCollider);
+			preOtherColliderList.push_back(otherCollider);
+		}
+	}
+	else
+	{
+		if (isCollided)
+		{
+			CollisionStay(otherCollider);
+		}
+		else
+		{
+			CollisionExit(otherCollider);
+			preOtherColliderList.erase(iter);
+		}
+	}
 }
 
-void Collider::OnCollisionStay(weak_ptr<Collider> otherCollider)
+unsigned int Collider::Get_ColliderIndex() const
 {
+	return colliderIndex;
 }
 
-void Collider::OnCollisionExit(weak_ptr<Collider> otheCollider)
+void Collider::CollisionStart(weak_ptr<Collider> otherCollider)
 {
+	ownerObject.lock()->OnCollisionStart(weakThisCollider, otherCollider);
+}
+
+void Collider::CollisionStay(weak_ptr<Collider> otherCollider)
+{
+	ownerObject.lock()->OnCollisionStay(weakThisCollider, otherCollider);
+}
+
+void Collider::CollisionExit(weak_ptr<Collider> otherCollider)
+{
+	ownerObject.lock()->OnCollisionExit(weakThisCollider, otherCollider);
+}
+
+HRESULT Collider::Initialize()
+{
+	weakThisCollider = static_pointer_cast<Collider>(weakThis.lock());
+	return S_OK;
 }
 
 void Collider::OnEnable()

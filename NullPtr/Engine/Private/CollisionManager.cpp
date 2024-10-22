@@ -31,11 +31,9 @@ void CollisionManager::Update_CollisionGroup(const int leftLayer, const int righ
 				continue;
 			}
 
-			if (Is_Collided(elem_left, elem_right))
-			{
-				elem_left.lock()->OnCollisionStay(elem_right);
-				elem_right.lock()->OnCollisionStay(elem_left);
-			}
+			bool isCollided = Is_Collided(elem_left, elem_right);
+			elem_left.lock()->OnCollision(elem_right, isCollided);
+			elem_right.lock()->OnCollision(elem_left, isCollided);
 		}
 	}
 }

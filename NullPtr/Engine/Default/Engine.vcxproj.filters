@@ -70,6 +70,9 @@
     <ClInclude Include="..\Public\Engine_Struct.h">
       <Filter>99.Etc</Filter>
     </ClInclude>
+    <ClInclude Include="..\Public\Engine_Enum.h">
+      <Filter>99.Etc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Engine.rc" />

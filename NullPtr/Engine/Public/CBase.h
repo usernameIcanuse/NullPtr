@@ -17,6 +17,10 @@ public:
 	virtual void OnDestroy() {}
 
 	virtual void Free() {}
+
+protected:
+	weak_ptr<CBase> weakThis;
+
 private:
 	bool isEnable;
 };

@@ -9,3 +9,4 @@
 using namespace std;
 
 #include "Engine_Macro.h"
+#include "Engine_Enum.h"

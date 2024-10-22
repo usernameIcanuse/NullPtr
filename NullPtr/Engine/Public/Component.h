@@ -1,6 +1,7 @@
 #pragma once
 #include "CBase.h"
 
+class GameObject;
 class Component : public CBase
 {
 public:
@@ -13,5 +14,8 @@ public:
 	virtual void OnDestroy() override;
 
 	virtual void Free() override;
+
+protected:
+	weak_ptr<GameObject> ownerObject;
 };
 
