@@ -16,16 +16,21 @@ public:
 	void CollisionExit(weak_ptr<Collider> otherCollider);
 
 public:
-	virtual HRESULT Initialize();
+	virtual HRESULT Initialize() override;
 	virtual void OnEnable() override;
 	virtual void OnDisable() override;
 	virtual void OnDestroy() override;
 
 	virtual void Free() override;
 
+public:
+	static shared_ptr<Collider> Create();
+	
 private:
 	list<weak_ptr<Collider>> preOtherColliderList;
 	weak_ptr<Collider> weakThisCollider;
 	unsigned int colliderIndex;
+
+	static unsigned int assignedColliderIndex;
 };
 

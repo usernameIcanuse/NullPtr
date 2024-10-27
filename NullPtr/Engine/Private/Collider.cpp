@@ -1,6 +1,8 @@
 #include "Collider.h"
 #include "GameObject.h"
 
+unsigned int Collider::assignedColliderIndex = 0;
+
 Collider::Collider()
 {
 }
@@ -65,9 +67,20 @@ void Collider::CollisionExit(weak_ptr<Collider> otherCollider)
 	ownerObject.lock()->OnCollisionExit(weakThisCollider, otherCollider);
 }
 
+shared_ptr<Collider> Collider::Create()
+{
+	shared_ptr<Collider> instance = make_shared<Collider>();
+	instance->weakThis = instance;
+	instance->Initialize();
+
+	return instance;
+}
+
 HRESULT Collider::Initialize()
 {
 	weakThisCollider = static_pointer_cast<Collider>(weakThis.lock());
+	colliderIndex = assignedColliderIndex++;
+
 	return S_OK;
 }
 

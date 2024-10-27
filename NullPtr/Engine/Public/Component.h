@@ -15,6 +15,11 @@ public:
 
 	virtual void Free() override;
 
+	virtual HRESULT Initialize() {};
+public:
+	weak_ptr<GameObject> Get_OwnerObject();
+	void Set_Owner(weak_ptr<GameObject> owner);
+
 protected:
 	weak_ptr<GameObject> ownerObject;
 };
