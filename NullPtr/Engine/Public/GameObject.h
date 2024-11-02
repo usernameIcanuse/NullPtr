@@ -11,6 +11,9 @@ protected:
 	virtual ~GameObject();
 
 public:
+	virtual HRESULT Initialize_Prototype() PURE;
+	virtual HRESULT Initialize(void* Arg) PURE;
+
 	virtual void Start();
 	virtual void Tick(float deltaTime);
 	virtual void LateTick(float deltaTime);

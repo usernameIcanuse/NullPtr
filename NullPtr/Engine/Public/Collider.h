@@ -3,6 +3,7 @@
 
 class Collider : public Component
 {
+	DECLARE_CLONABLE(Collider, Component)
 public:
 	Collider();
 	virtual ~Collider();
@@ -16,15 +17,14 @@ public:
 	void CollisionExit(weak_ptr<Collider> otherCollider);
 
 public:
-	virtual HRESULT Initialize() override;
+	virtual HRESULT Initialize_Prototype() override;
+	virtual HRESULT Initialize(void* Arg) override;
+
 	virtual void OnEnable() override;
 	virtual void OnDisable() override;
 	virtual void OnDestroy() override;
 
 	virtual void Free() override;
-
-public:
-	static shared_ptr<Collider> Create();
 	
 private:
 	list<weak_ptr<Collider>> preOtherColliderList;

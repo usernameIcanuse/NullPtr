@@ -3,6 +3,8 @@
 
 unsigned int Collider::assignedColliderIndex = 0;
 
+IMPLEMENT_CLONABLE(Collider, Component)
+
 Collider::Collider()
 {
 }
@@ -67,16 +69,12 @@ void Collider::CollisionExit(weak_ptr<Collider> otherCollider)
 	ownerObject.lock()->OnCollisionExit(weakThisCollider, otherCollider);
 }
 
-shared_ptr<Collider> Collider::Create()
+HRESULT Collider::Initialize_Prototype()
 {
-	shared_ptr<Collider> instance = make_shared<Collider>();
-	instance->weakThis = instance;
-	instance->Initialize();
-
-	return instance;
+	return S_OK;
 }
 
-HRESULT Collider::Initialize()
+HRESULT Collider::Initialize(void* pArg)
 {
 	weakThisCollider = static_pointer_cast<Collider>(weakThis.lock());
 	colliderIndex = assignedColliderIndex++;

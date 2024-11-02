@@ -23,6 +23,7 @@ void ObjectManager::StartObject()
 	for (; iter != StartObjects[currentLevel].end();)
 	{
 		(*iter)->Start();
+		ObjectLayers[currentLevel].push_back((*iter));
 		iter = StartObjects[currentLevel].erase(iter);
 	}
 }
