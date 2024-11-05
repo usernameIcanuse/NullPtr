@@ -136,6 +136,7 @@
     <ClInclude Include="..\Public\CBase.h" />
     <ClInclude Include="..\Public\Collider.h" />
     <ClInclude Include="..\Public\Component.h" />
+    <ClInclude Include="..\Public\ComponentManager.h" />
     <ClInclude Include="..\Public\Engine_Defines.h" />
     <ClInclude Include="..\Public\Engine_Enum.h" />
     <ClInclude Include="..\Public\Engine_Macro.h" />
@@ -143,6 +144,8 @@
     <ClInclude Include="..\Public\GameInstance.h" />
     <ClInclude Include="..\Public\GameObject.h" />
     <ClInclude Include="..\Public\Graphic_Device.h" />
+    <ClInclude Include="..\Public\Level.h" />
+    <ClInclude Include="..\Public\LevelManager.h" />
     <ClInclude Include="..\Public\ObjectManager.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
@@ -154,9 +157,12 @@
     <ClCompile Include="..\Private\Collider.cpp" />
     <ClCompile Include="..\Private\CollisionManager.cpp" />
     <ClCompile Include="..\Private\Component.cpp" />
+    <ClCompile Include="..\Private\ComponentManager.cpp" />
     <ClCompile Include="..\Private\GameInstance.cpp" />
     <ClCompile Include="..\Private\GameObject.cpp" />
     <ClCompile Include="..\Private\Graphic_Device.cpp" />
+    <ClCompile Include="..\Private\Level.cpp" />
+    <ClCompile Include="..\Private\LevelManager.cpp" />
     <ClCompile Include="..\Private\ObjectManager.cpp" />
     <ClCompile Include="..\Public\Engine_Macro.cpp" />
   </ItemGroup>

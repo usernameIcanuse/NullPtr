@@ -22,9 +22,9 @@ public:
 
 	virtual void OnEnable() override;
 	virtual void OnDisable() override;
-	virtual void OnDestroy() override;
 
-	virtual void Free() override;
+	virtual void OnDestroy() override;
+	void Free();
 	
 private:
 	list<weak_ptr<Collider>> preOtherColliderList;

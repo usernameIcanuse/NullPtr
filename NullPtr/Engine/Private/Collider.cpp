@@ -11,6 +11,7 @@ Collider::Collider()
 
 Collider::~Collider()
 {
+	Free();
 }
 
 void Collider::OnCollision(weak_ptr<Collider> otherCollider, bool isCollided)

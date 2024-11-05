@@ -6,7 +6,7 @@ class Component : public CBase
 {
 public:
 	Component();
-	virtual ~Component();
+	virtual ~Component() = default;
 
 public:
 	virtual HRESULT Initialize_Prototype() PURE;

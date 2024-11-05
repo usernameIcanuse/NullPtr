@@ -50,6 +50,29 @@ void ObjectManager::LateTick(float deltaTime)
 	}
 }
 
+void ObjectManager::OnDestroy()
+{
+}
+
 void ObjectManager::Free()
 {
+}
+
+void ObjectManager::OnLevelEnter()
+{
+}
+
+void ObjectManager::OnLevelExit()
+{
+}
+
+void ObjectManager::Clear_LayerObject(unsigned int levelIndex)
+{
+	for (auto& obj : ObjectLayers[levelIndex])
+	{
+		if (obj.get())
+			obj->OnDestroy();
+
+		obj.reset();
+	}
 }

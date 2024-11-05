@@ -12,7 +12,16 @@ public:
 	void Tick(float deltaTime);
 	void LateTick(float deltaTime);
 	
-	virtual void Free() override;
+	virtual void OnDestroy() override;
+	void Free();
+
+public:
+	virtual void OnLevelEnter() override;
+	virtual void OnLevelExit() override;
+
+public:
+	void Clear_LayerObject(unsigned int levelIndex);
+
 private:
 	vector<list<shared_ptr<GameObject>>> StartObjects;
 	vector<list<shared_ptr<GameObject>>> ObjectLayers;

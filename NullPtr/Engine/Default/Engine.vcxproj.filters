@@ -34,6 +34,15 @@
     <Filter Include="02.Components\Collider">
       <UniqueIdentifier>{9a76fd2a-b494-40ba-9f5a-f2a899570fc4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="04.Manager\02.ComponentManager">
+      <UniqueIdentifier>{8626fbbc-dae4-4522-9b24-08f9cc8cfe72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Manager\03.LevelManager">
+      <UniqueIdentifier>{bf850acd-1999-4214-9dc4-23ea7ca2bc42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05.Level">
+      <UniqueIdentifier>{33af65a0-3955-42fe-9790-6f0b03fd30f3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h" />
@@ -73,6 +82,15 @@
     <ClInclude Include="..\Public\Engine_Enum.h">
       <Filter>99.Etc</Filter>
     </ClInclude>
+    <ClInclude Include="..\Public\ComponentManager.h">
+      <Filter>04.Manager\02.ComponentManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\LevelManager.h">
+      <Filter>04.Manager\03.LevelManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Level.h">
+      <Filter>05.Level</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Engine.rc" />
@@ -104,6 +122,15 @@
     </ClCompile>
     <ClCompile Include="..\Public\Engine_Macro.cpp">
       <Filter>99.Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\ComponentManager.cpp">
+      <Filter>04.Manager\02.ComponentManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\LevelManager.cpp">
+      <Filter>04.Manager\03.LevelManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Level.cpp">
+      <Filter>05.Level</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

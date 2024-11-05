@@ -15,6 +15,14 @@ void CollisionManager::Tick(float deltaTime)
 	}
 }
 
+void CollisionManager::OnDestroy()
+{
+}
+
+void CollisionManager::Free()
+{
+}
+
 void CollisionManager::Update_CollisionGroup(const int leftLayer, const int rightLayer)
 {
 	for (auto& elem_left : colliderList[leftLayer])

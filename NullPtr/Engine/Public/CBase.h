@@ -16,6 +16,9 @@ public:
 	virtual void OnDisable() {}
 	virtual void OnDestroy() {}
 
+	virtual void OnLevelEnter() {}
+	virtual void OnLevelExit() {}
+
 	virtual void Free() {}
 
 protected:

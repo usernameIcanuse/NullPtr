@@ -8,6 +8,8 @@ class CollisionManager : public CBase
 public:
 	void Tick(float deltaTime);
 
+	virtual void OnDestroy() override;
+	virtual void Free() override;
 private:
 	void Update_CollisionGroup(const int leftLayer, const int rightLayer);
 	bool Is_Collided(weak_ptr<Collider> leftCollider, weak_ptr<Collider> rightCollider);
